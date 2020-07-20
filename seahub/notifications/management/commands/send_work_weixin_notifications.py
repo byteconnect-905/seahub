@@ -6,7 +6,7 @@ import re
 import requests
 
 from django.core.management.base import BaseCommand
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.utils import translation
 from django.utils.translation import ungettext
 
