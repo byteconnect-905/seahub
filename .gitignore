@@ -25,6 +25,7 @@ pylintrc
 .DS_Store
 media/CACHE
 media/custom
+media/assets/frontend
 
 # media/avatars
 media/avatars/*
@@ -60,5 +61,6 @@ tags
 frontend/webpack-stats.dev.json
 frontend/node_modules
 frontend/package-lock.json
+frontend/build
 
 /.idea
