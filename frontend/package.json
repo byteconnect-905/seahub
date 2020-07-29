@@ -49,7 +49,8 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js && rm -rf ../media/assets/frontend && cp -r build/frontend ../media/assets/",
+    "deploy:203": "npm run build && scp -r ../media/assets root@10.0.0.203:/data/seafile",
     "test": "node scripts/test.js --env=jsdom",
     "dev": "export NODE_ENV=development && node config/server.js"
   },

@@ -152,17 +152,12 @@ class Account extends Component {
             <div className="inner-caret"></div>
           </div>
           <div className="sf-popover-con">
-            <div className="item o-hidden">
-              {this.renderAvatar()}
-              <div className="txt">{this.state.userName}</div>
-            </div>
             <div id="space-traffic">
               <div className="item">
                 <p>{gettext('Used:')}{' '}{this.state.quotaUsage} / {this.state.quotaTotal}</p>
                 <div id="quota-bar"><span id="quota-usage" className="usage" style={{width: this.state.usageRate}}></span></div>
               </div>
             </div>
-            <a href={siteRoot + 'profile/'} className="item">{gettext('Settings')}</a>
             {this.renderMenu()}
             <a href={siteRoot + 'accounts/logout/'} className="item">{gettext('Log out')}</a>
           </div>
