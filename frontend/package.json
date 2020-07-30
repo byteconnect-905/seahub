@@ -8,6 +8,7 @@
     "@seafile/seafile-editor": "^0.2.60",
     "MD5": "^1.3.0",
     "autoprefixer": "7.1.6",
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.0.8",
     "css-loader": "0.28.7",
@@ -49,7 +50,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && rm -rf ../media/assets/frontend && cp -r build/frontend ../media/assets/",
+    "build": "node scripts/build.js && cp src/assets/seafile-logo.png build/frontend/media && rm -rf ../media/assets/frontend && cp -r build/frontend ../media/assets/",
     "deploy:203": "npm run build && scp -r ../media/assets root@10.0.0.203:/data/seafile",
     "test": "node scripts/test.js --env=jsdom",
     "dev": "export NODE_ENV=development && node config/server.js"
