@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AsyncSelect from 'react-select/lib/Async';
-import { seafileAPI } from '../utils/seafile-api.js';
 import { gettext } from '../utils/constants';
 import { Utils } from '../utils/utils.js';
 import toaster from './toast';
+import { dccApi } from '../utils/dcc-api.js';
 
 const propTypes = {
   placeholder: PropTypes.string.isRequired,
@@ -34,10 +34,10 @@ class UserSelect extends React.Component {
   loadOptions = (input, callback) => {
     const value = input.trim();
     if (value.length > 0) {
-      seafileAPI.searchUsers(value).then((res) => {
+      dccApi.searchUser(value).then(users => {
         this.options = [];
-        for (let i = 0 ; i < res.data.users.length; i++) {
-          const item = res.data.users[i];
+        for (let i = 0 ; i < users.length; i++) {
+          const item = users[i];
           let obj = {};
           obj.value = item.name;
           obj.email = item.email;

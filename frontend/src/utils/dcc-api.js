@@ -1,7 +1,10 @@
 import axios from 'axios';
+import { seafileAPI } from './seafile-api';
 
 export class DccApi {
   req;
+
+  username = seafileAPI.getAccountInfo().then(res => res.data.email);
 
   constructor() {
     const domain = location.host.split(':')[0];
@@ -19,8 +22,9 @@ export class DccApi {
       });
   }
 
-  getContainers() {
-    return this.req.get('/app/containers');
+  async searchUser(q) {
+    const username = await this.username;
+    return this.req.get(`/pan/search-user?q=${q}&email=${username}`);
   }
 }
 
