@@ -924,3 +924,5 @@ if ENABLE_OAUTH or ENABLE_WORK_WEIXIN:
 #      'link': 'http://127.0.0.1:8000/shared-libs/',
 #      },
 # ]
+
+SEAFILE_VERSION = "7.0.5"

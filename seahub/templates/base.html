@@ -16,7 +16,7 @@
 {% endblock %}
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/jstree_default_theme/style.min.css" />
 <link rel="stylesheet" type="text/css" href="{% static "css/magnific-popup.css" %}" />
-<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/seahub.css?t=1398068110" />
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/seahub.min.css?t=1569203823" />
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/sf_font3/iconfont.css" />
 {% block extra_style %}{% endblock %}
 {% if branding_css != '' %}<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}{{ branding_css }}" />{% endif %} 
@@ -37,7 +37,7 @@
         <div id="header" class="{% block header_css_class %}d-flex{% endblock %}">
             <a href="{{ SITE_ROOT }}" id="logo">
                 {% if seacloud_mode %}
-                <img src="{{ MEDIA_URL }}img/seacloud_logo.png?t=1398068110" title="Seacloud" alt="logo" width="186" height="31" />
+                <img src="{{ MEDIA_URL }}img/seacloud_logo.png?t=1569203823" title="Seacloud" alt="logo" width="186" height="31" />
                 {% else %}
                 <img src="{{ MEDIA_URL }}{{ logo_path }}" title="{{ site_title }}" alt="logo" width="{{logo_width}}" height="{{logo_height}}" />
                 {% endif %}
@@ -147,7 +147,7 @@ var app = {
 <script type="text/javascript" src="{% static "scripts/lib/jquery.simplemodal.js" %}"></script>
 <script type="text/javascript" src="{% static "scripts/lib/jstree.min.js" %}"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jq.min.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}js/base.js?t=1536127546642"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/base.js?t=1569203823"></script>
 <script type="text/javascript">
 function prepareAjaxErrorMsg(xhr) {
     var error_msg;
