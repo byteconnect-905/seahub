@@ -12,7 +12,7 @@ PROJECT_ROOT = os.path.join(os.path.dirname(__file__), os.pardir)
 
 DEBUG = False
 
-CLOUD_MODE = False
+CLOUD_MODE = True
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
