@@ -47,7 +47,6 @@
             <li class="tab {% block cur_personal_wiki %}{% endblock %}"><a href="{% url 'wiki:list' %}"><span class="sf2-icon-wiki" aria-hidden="true"></span>{% trans "Wikis" %}</a></li>
             {% endif %}
             {% endfor %}
-            <li class="tab"><a href="{{ SITE_ROOT }}#devices/" class="ellipsis" title="{% trans "Linked Devices" %}"><span class="sf2-icon-monitor" aria-hidden="true"></span>{% trans "Linked Devices" %}</a></li>
             {% if enable_guest_invitation and user.permissions.can_invite_guest %}
             <li class="tab">
                 <a href="{{ SITE_ROOT }}#invitations/"><span aria-hidden="true" class="sf2-icon-invite"></span>{% trans "Invite People" %}</a>
