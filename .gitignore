@@ -22,6 +22,7 @@ pylintrc
 *.mo
 media/CACHE
 media/custom
+media/assets/frontend
 media/avatars/*
 !media/avatars/default-non-register.jpg
 !media/avatars/default.png
@@ -50,5 +51,6 @@ frontend/config/webpack.config.dev.js
 frontend/webpack-stats.dev.json
 frontend/node_modules
 frontend/package-lock.json
+frontend/build
 
 /.idea
