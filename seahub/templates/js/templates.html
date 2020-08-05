@@ -50,16 +50,6 @@
         <br />
         <% } %>
         <% if (enable_encrypted_library) { %>
-        <div class="repo-create-encryption">
-            <label class="checkbox-label">
-                <input type="checkbox" name="encryption" id="encrypt-switch" class="vam" />
-                <span class="checkbox-option vam">{% trans "Encrypt" %}</span>
-            </label>
-            <label for="passwd">{% trans "Password" %}</label><span class="tip">{% blocktrans %}(at least {{repo_password_min_length}} characters){% endblocktrans %}</span><br />
-            <input type="password" name="passwd" disabled="disabled" class="input input-disabled" id="passwd" /><br />
-            <label for="passwd-again">{% trans "Password again" %}</label><br />
-            <input type="password" name="passwd_again" disabled="disabled" class="input input-disabled" id="passwd-again" />
-        </div>
         <% } %>
         <p class="error hide"></p>
         <input type="submit" value="{% trans "Submit"%}" class="submit" />
