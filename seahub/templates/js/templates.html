@@ -2433,16 +2433,9 @@
 <script type="text/template" id="user-info-popup-tmpl">
     <div class="outer-caret up-outer-caret"><div class="inner-caret"></div></div>
     <div class="sf-popover-con">
-        <div class="item ovhd">
-            {% avatar request.user 36 %}
-            <div class="txt">
-                <%- app.pageOptions.name %>
-            </div>
-        </div>
         <div class="loading-icon loading-tip"></div>
         <p class="error alc hide"></p>
         <div id="space-traffic" class="hide"></div>
-        <a class="item" href="{{ SITE_ROOT }}profile/">{% trans "Settings" %}</a>
         {% if request.user.is_staff %}
         <a href="{% url 'sysadmin' %}" title="{% trans "System Admin" %}" class="item">{% trans "System Admin" %}</a>
         {% endif %}
