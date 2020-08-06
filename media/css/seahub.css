@@ -230,13 +230,13 @@ dl { margin:1.5em 0; }
 dt { color:#666; margin:24px 0 2px; font-weight:normal; }
 dd { margin-bottom:.8em; color:#222; }
 a {
-    color:#eb8205;
+    color:#1890ff;
     text-decoration:none;
     font-weight:bold;
 }
 a.normal {font-weight: normal;}
 a:focus, a:hover {
-    color: #eb8205;
+    color: #1890ff;;
 }
 a.table-sort-op {
     color:inherit;
@@ -561,7 +561,7 @@ input.short-input {
 }
 .op-icon.sf2-x,
 .op-icon.sf2-x:hover {
-    color:#f89a68;
+    color:#1890ff;
 }
 .op-icon.sf2-x:hover,
 .op-icon.sf2-x:focus {
@@ -1008,7 +1008,7 @@ textarea:-moz-placeholder {/* for FF */
     padding:0;
 }
 .side-tabnav-tabs .tab a:hover {
-    background-color:#feefb8;
+    color:#1890ff;
     text-decoration:none;
 }
 .side-tabnav-tabs .tab [class^="sf2-icon-"] {
@@ -1020,6 +1020,9 @@ textarea:-moz-placeholder {/* for FF */
     font-size:24px;
     line-height:1;
     color:#999;
+}
+.side-tabnav-tabs .tab a:hover [class^="sf2-icon-"] {
+    color:#1890ff;
 }
 .side-nav-toggle {
     font-size:1.5rem;
@@ -1040,13 +1043,13 @@ textarea:-moz-placeholder {/* for FF */
 }
 .side-tabnav-tabs .tab-cur a,
 .side-tabnav-tabs .tab-cur a:hover {
-    background-color:#feac74;
+    color:#1890ff;
 }
 .side-tabnav-tabs .tab-cur [class^="sf2-icon-"],
 .side-tabnav-tabs .tab-cur a,
 #group-nav .tab-cur .sharp,
 #share-admin-nav .tab-cur .sharp {
-    color:#fff;
+    color:#1890ff;
 }
 .side-tabnav-tabs .tab-cur a {
     font-weight:bold;
@@ -1290,7 +1293,7 @@ textarea:-moz-placeholder {/* for FF */
 }
 .new-narrow-panel .con {
     padding:30px 0 60px;
-    width:268px; 
+    width:268px;
     margin:0 auto;
 }
 .new-narrow-panel .input {
@@ -1676,9 +1679,9 @@ button.sf-dropdown-toggle:focus {
     font-weight:normal;
 }
 .sf-dropdown-menu a:hover {
-    background:#feaa7c;
+    background:#E5F7FF;
     text-decoration:none;
-    color:#fff;
+    /* color:#fff; */
 }
 
 /* mobile flie-menu */
@@ -3896,7 +3899,7 @@ button.sf-dropdown-toggle:focus {
     color: #999;
 }
 .shared-link-copy-icon:hover {
-    cursor: pointer; 
+    cursor: pointer;
     color: #333;
 }
 
