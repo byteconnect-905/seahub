@@ -1354,9 +1354,9 @@ textarea:-moz-placeholder {/* for FF */
 }
 .cur-view-path .tab-tabs-nav .ui-state-active .a,
 .cur-view-path .tab-tabs-nav .a:hover {
-    color:#eb8205;
+    color:#1890ff;
     text-decoration:none;
-    border-bottom-color:#eb8205;
+    border-bottom-color:#1890ff;
 }
 .tab-tabs .ui-tabs-panel {
     padding:0;
