@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # zMingGit <517046497@qq.com>, 2018
 # Alfred <alfredhuang211@qq.com>, 2015
@@ -427,7 +427,7 @@ msgstr "{placeholder} 目录权限"
 #: static/scripts/sysadmin-app/views/repo.js:107
 #: static/scripts/sysadmin-app/views/repos.js:58
 msgid "Search user or enter email and press Enter"
-msgstr "搜索用户或输入电子邮件，然后按Enter"
+msgstr "请输入用户名或真实姓名"
 
 #: static/scripts/app/views/dialogs/repo-folder-perm-admin.js:141
 msgid "Select a group"
@@ -928,7 +928,7 @@ msgstr "权限错误"
 #: static/scripts/sysadmin-app/views/address-book-group.js:172
 #: static/scripts/sysadmin-app/views/group-members.js:41
 msgid "Search users or enter emails and press Enter"
-msgstr "搜索用户或输入电子邮件，然后按Enter"
+msgstr "请输入用户名或真实姓名"
 
 #: static/scripts/common.js:693 static/scripts/common.js:764
 msgid "Please enter 1 or more character"

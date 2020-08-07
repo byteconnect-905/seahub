@@ -701,7 +701,7 @@ define([
             }
 
             return {
-                placeholder: gettext("Search users or enter emails and press Enter"),
+                placeholder: "请输入用户名或真实姓名进行搜索",
 
                 // with 'tags', the user can directly enter, not just select
                 // tags need `<input type="hidden" />`, not `<select>`

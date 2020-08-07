@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # zMingGit <517046497@qq.com>, 2017
 # Alfred <alfredhuang211@qq.com>, 2015
@@ -6512,7 +6512,7 @@ msgstr "创建时间 / 过期时间"
 #: seahub/templates/sysadmin/repoadmin_js.html:19
 #: seahub/templates/sysadmin/sys_inst_info_user.html:143
 msgid "Search user or enter email and press Enter"
-msgstr "搜索用户或输入电子邮件，然后按Enter"
+msgstr "请输入用户名或真实姓名"
 
 #: seahub/templates/sysadmin/repoadmin_js.html:20
 #: seahub/templates/sysadmin/sys_inst_info_user.html:144
