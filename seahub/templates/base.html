@@ -58,15 +58,7 @@
                     <div id="user-info-popup" class="account-popup sf-popover hide">
                         <div class="outer-caret up-outer-caret"><div class="inner-caret"></div></div>
                         <div class="sf-popover-con">
-                            <div class="item ovhd">
-                                {% avatar request.user 36 %}
-                                <div class="txt">
-                                    {{ request.user.username|email2nickname }}
-                                </div>
-                            </div>
-                            <span class="loading-icon loading-tip"></span>
                             <div id="space-traffic" class="hide" data-url="{% url 'space_and_traffic' %}"></div>
-                            <a class="item" href="{{ SITE_ROOT }}profile/">{% trans "Settings" %}</a>
                             {% block admin_link %}
                             {% if request.user.is_staff %}
                             <a href="{% url 'sys_useradmin' %}" title="{% trans "System Admin" %}" class="item">{% trans "System Admin" %}</a>
