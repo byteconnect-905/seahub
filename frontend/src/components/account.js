@@ -125,7 +125,6 @@ class Account extends Component {
              </div>
            </div>
            {this.renderMenu()}
-           <a href={siteRoot + 'accounts/logout/'} className="item">{gettext("Log out")}</a>
          </div>
         </div>
       </div>
