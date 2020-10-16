@@ -5,8 +5,28 @@
 //Configure loading modules from the lib directory,
 //except for 'app' ones, which are in a sibling directory.
 
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim()
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
 var username;
-var dccUrl;
+var dccUrl = getCookie('dccAddr');
+if (dccUrl) {
+    dccUrl = dccUrl.replace(/"/g, '') + '/api/v1';
+}
+console.log('dccUrlFromCookie: ', dccUrl);
 
 require.config({
     // The shim config allows us to configure dependencies for
@@ -72,14 +92,16 @@ define([
             username = res.email;
         }
     })
-    var domain = location.host.split(':')[0];
-    $.ajax({
-        url: 'http://' + domain + ':4000/api/v1/info/dcc-url',
-        success: function(res) {
-            dccUrl = 'http://' + res.data + '/api/v1';
-            console.log('dccUrl: ', dccUrl);
-        }
-    })
+    if (!dccUrl) {
+        var domain = location.host.split(':')[0];
+        $.ajax({
+            url: 'http://' + domain + ':4000/api/v1/info/dcc-url',
+            success: function(res) {
+                dccUrl = 'http://' + res.data + '/api/v1';
+                console.log('dccUrl: ', dccUrl);
+            }
+        })
+    }
 
     return {
         INFO_TIMEOUT: 10000,     // 10 secs for info msg
@@ -532,21 +554,6 @@ define([
         },
 
         prepareCSRFToken: function(xhr, settings) {
-            function getCookie(name) {
-                var cookieValue = null;
-                if (document.cookie && document.cookie != '') {
-                    var cookies = document.cookie.split(';');
-                    for (var i = 0; i < cookies.length; i++) {
-                        var cookie = jQuery.trim(cookies[i]);
-                        // Does this cookie string begin with the name we want?
-                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
-                        }
-                    }
-                }
-                return cookieValue;
-            }
             if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
                 // Only send the token to relative URLs i.e. locally.
                 xhr.setRequestHeader("X-CSRFToken", getCookie(app.config.csrfCookieName));

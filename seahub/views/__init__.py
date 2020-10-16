@@ -1166,7 +1166,10 @@ def client_token_login(request):
             request.client_token_login = True
             auth_login(request, user)
 
-    return HttpResponseRedirect(request.GET.get("next", reverse('libraries')))
+    # 设置dcc地址
+    response = HttpResponseRedirect(request.GET.get("next", reverse('libraries')))
+    response.set_cookie('dccAddr', request.GET.get('dccAddr', ''))
+    return response
 
 def choose_register(request):
     """
