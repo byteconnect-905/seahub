@@ -233,18 +233,21 @@ class HTTPAuthenticator(BaseMiddleware):
             authvalue = ""
         authvalue = authvalue.strip().decode("base64")
         username, password = authvalue.split(":",1)
-        url  = DCC_ADDRESS + "/api/v1/auth/get-pan-account";
-        _logger.info(url)
-        body = {
-            "username": username,
-            "password": password
-        }
-        r = requests.put(url, json=body)
-        res = r.json()
-        if res['code'] != 200:
-            return self.sendBasicAuthResponse(environ, start_response)
-        username = str(res['data']['username'])
-        password = str(res['data']['pwd'])
+
+        if '@dcc.com' not in username:
+            url  = DCC_ADDRESS + "/api/v1/auth/get-pan-account";
+            _logger.info(url)
+            body = {
+                "username": username,
+                "password": password
+            }
+            r = requests.put(url, json=body)
+            res = r.json()
+            if res['code'] != 200:
+                return self.sendBasicAuthResponse(environ, start_response)
+            username = str(res['data']['username'])
+            password = str(res['data']['pwd'])
+
         if self._domaincontroller.authDomainUser(realmname, username, password, environ):
             environ["http_authenticator.realm"] = realmname
             environ["http_authenticator.username"] = username
