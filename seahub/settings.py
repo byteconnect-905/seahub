@@ -14,6 +14,8 @@ DEBUG = False
 
 CLOUD_MODE = True
 
+DCC_ADDRESS = "http://dcc.com"
+
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
