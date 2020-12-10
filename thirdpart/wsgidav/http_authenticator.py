@@ -235,15 +235,14 @@ class HTTPAuthenticator(BaseMiddleware):
         username, password = authvalue.split(":",1)
 
         if '@dcc.com' not in username:
-            url  = DCC_ADDRESS + "/api/v1/auth/get-pan-account";
-            _logger.info(url)
+            url  = DCC_ADDRESS + "/api/v1/auth/get-pan-account"
             body = {
                 "username": username,
                 "password": password
             }
             r = requests.put(url, json=body)
             res = r.json()
-            if res['code'] != 200:
+            if r.status_code != 200 or res['code'] != 200:
                 return self.sendBasicAuthResponse(environ, start_response)
             username = str(res['data']['username'])
             password = str(res['data']['pwd'])
